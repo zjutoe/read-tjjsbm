@@ -1,0 +1,161 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[12pt,a4paper]{article}
+\usepackage{fontspec,xunicode,xltxtra}
+\usepackage{titlesec}
+\usepackage[top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
+
+\titleformat{\section}{\Large\whei}{\thesection}{1em}{}
+
+\XeTeXlinebreaklocale ``zh''
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+
+% fonts in Mac OS
+\newfontfamily\baoli{Baoli SC}
+\newfontfamily\biaukai{BiauKai}
+\newfontfamily\hei{Hei}
+\newfontfamily\heiti{Heiti SC}
+\newfontfamily\kai{Kai}
+\newfontfamily\kaiti{Kaiti SC}
+\newfontfamily\lantinghei{Lantinghei SC}
+\newfontfamily\libian{Libian SC}
+\newfontfamily\lihei{LiHei Pro}
+\newfontfamily\lisong{LiSong Pro}
+\newfontfamily\song{Songti SC}
+\newfontfamily\fsong{STFangsong}
+\newfontfamily\stheiti{STHeiti}
+\newfontfamily\stkaiti{STKaiti}
+\newfontfamily\stsong{STSong}
+\newfontfamily\weibei{Weibei SC}
+\newfontfamily\xingkai{Xingkai SC}
+\newfontfamily\lisung{Apple LiSung}
+\newfontfamily\whei{WenQuanYi Zen Hei}
+\newfontfamily\wheio{WenQuanYi Zen Hei Mono}
+\newfontfamily\wmhei{WenQuanYi Micro Hei}
+\newfontfamily\wmheil{WenQuanYi Micro Hei Light}
+\newfontfamily\wmheio{WenQuanYi Micro Hei Mono}
+\newfontfamily\wmheilo{WenQuanYi Micro Hei Mono Light}
+
+\setmainfont{STFangsong}
+
+%% fonts in Windows
+%%
+%% \newfontfamily\bwei{FZBeiWeiKaiShu-S19S}
+%% \newfontfamily\zbhei{FZZhanBiHei-M22T}
+%% \newfontfamily\xzt{FZXiaoZhuanTi-S13T}
+%% \newfontfamily\xbsong{FZXiaoBiaoSong-B05}
+%% \newfontfamily\dbsong{FZDaBiaoSong-B06}
+%% \newfontfamily\gulif{FZGuLi-S12T}
+%% \newfontfamily\gulij{FZGuLi-S12S}
+%% \newfontfamily\kai{Kai}
+%% \newfontfamily\hei{FZHei-B01}
+%% \newfontfamily\wsharp{WenQuanYi Zen Hei Sharp}
+%% \newfontfamily\fsong{STFangsong}
+%% \newfontfamily\stsong{STSong}
+%% \newfontfamily\lanting{FZLanTingSong}
+%% \newfontfamily\boya{FZBoYaSong}
+%% \newfontfamily\lishu{FZLiShu-S01}
+%% \newfontfamily\lishuII{FZLiShu II-S06}
+%% \newfontfamily\yao{FZYaoTi-M06}
+%% \newfontfamily\zyuan{FZZhunYuan-M02}
+%% \newfontfamily\xhei{FZXiHei I-Z08}
+%% \newfontfamily\xkai{FZXingKai-S04}
+%% \newfontfamily\ssong{FZShuSong-Z01}
+%% \newfontfamily\bsong{FZBaoSong-Z04}
+%% \newfontfamily\nbsong{FZNew BaoSong-Z12}
+%% \newfontfamily\caiyun{FZCaiYun-M09}
+%% \newfontfamily\hanj{FZHanJian-R-GB}
+%% \newfontfamily\songI{FZSongYi-Z13}
+%% \newfontfamily\hcao{FZHuangCao-S09}
+%% \newfontfamily\wbei{Weibei SC}
+%% \newfontfamily\huali{FZHuaLi-M14}
+%% \setmainfont{FZLanTingSong}
+
+\renewcommand{\baselinestretch}{1.25}
+
+\begin{document}
+
+\title{\whei XeTeX中文字体使用示例}
+\author{\kai Toe Zju}
+\date{\kai 2013年6月1日}
+
+\maketitle
+
+\section{简介}
+使用XeTeX排版中文内容十分方便。本文参考了何勃亮先生的文
+章<http://www.heboliang.cn/archive/xetex-intro.html>，基本上是在他
+的TeX文件中把字体换成Mac OS X下系统自带的字体而已。
+
+\section{字体列表}
+本文使用了大量Mac OS X自带的字体。TeX文件中还有Windows下字体的定义方法隐藏在注释中。
+
+\begin{table}[htbp]
+\caption{字体列表}
+
+\centering
+\begin{tabular}{|l|c|r|}
+\hline
+\hei 字体 & \hei 命令 & \hei 字体效果 \\
+\hline
+\kai 报隶 & \verb+\baoli+ & \baoli 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 标楷 & \verb+\biaukai+ & \biaukai 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 黑 & \verb+\hei+ & \hei 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 黑体 & \verb+\heiti+ & \heiti 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 楷 & \verb+\kai+ & \kai 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 楷体 & \verb+\kaiti+ & \kaiti 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 兰亭黑体 & \verb+\lantinghei+ & \lantinghei 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 隶变 & \verb+\libian+ & \libian 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 俪黑 & \verb+\lihei+ & \lihei 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 俪宋 & \verb+\lisong+ & \lisong 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 宋 & \verb+\song+ & \song 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 仿宋 & \verb+\fsong+ & \fsong 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 华文黑体 & \verb+\stheiti+ & \stheiti 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 华文楷体 & \verb+\stkaiti+ & \stkaiti 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 华文宋 & \verb+\stsong+ & \stsong 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 魏碑 & \verb+\weibei+ & \weibei 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 行楷 & \verb+\xingkai+ & \xingkai 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 苹果俪宋 & \verb+\lisung+ & \lisung 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 宋 & \verb+\song+ & \song 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 楷 & \verb+\kai+ & \kai 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 仿宋 & \verb+\fsong+ & \fsong 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 文泉驿正黑 & \verb+\whei+ & \whei 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 文泉驿正黑Mono & \verb+\wheio+ & \wheio 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 文泉驿细黑 & \verb+\wmhei+ & \wmhei 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 文泉驿细黑小 & \verb+\wmheil+ & \wmheil 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 文泉驿细黑小Mono & \verb+\wmheilo+ & \wmheilo 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\kai 文泉驿细黑小Mono & \verb+\wmheio+ & \wmheio 那只狐狸跳过了那只懒狗 The quick brown fox \\
+\hline
+
+%% for windows
+%
+% \kai 宋体 & \verb+\song+ & \song 宋体 \\
+% \kai 楷体 & \verb+\kai+ & \kai 楷体 \\
+% \kai 黑体 & \verb+\hei+ & \hei 黑体 \\
+% \kai 仿宋体 & \verb+\fsong+ & \fsong 仿宋体 \\
+% \kai 文泉驿黑体 & \verb+\whei+ & \whei 文泉驿黑体 \\
+% \kai 书宋体 & \verb+\ssong+ & \ssong 书宋体 \\
+% \kai 报宋体 & \verb+\bsong+ & \bsong 报宋体 \\
+% \kai 新报宋体 & \verb+\nbsong+ & \nbsong 新报宋体 \\
+% \kai 兰亭宋体 & \verb+\lanting+ & \lanting 兰亭宋体 \\
+% \kai 博雅宋体 & \verb+\boya+ & \boya 博雅宋体 \\
+% \kai 宋体一 & \verb+\songI+ & \songI 宋体一 \\
+% \kai 隶书 & \verb+\lishu+ & \lishu 隶书 \\
+% \kai 隶书二 & \verb+\lishuII+ & \lishuII 隶书二 \\
+% \kai 古隶简体 & \verb+\gulij+ & \gulij 古隶简体 \\
+% \kai 古隶繁体 & \verb+\gulif+ & \gulif 古隶繁体 \\
+% \kai 华隶书 & \verb+\huali+ & \huali 华隶书 \\
+% \kai 小标宋 & \verb+\xbsong+ & \xbsong 小标宋 \\
+% \kai 大标宋 & \verb+\dbsong+ & \dbsong 大标宋 \\
+% \kai 小篆体 & \verb+\xzt+ & \xzt 小篆体 \\
+% \kai 姚体 & \verb+\yao+ & \yao 姚体 \\
+% \kai 准圆 & \verb+\zyuan+ & \zyuan 准圆 \\
+% \kai 细黑一 & \verb+\xhei+ & \xhei 细黑一 \\
+% \kai 行楷书 & \verb+\xkai+ & \xkai 行楷书 \\
+% \kai 彩云体 & \verb+\caiyun+ & \caiyun 彩云体 \\
+% \kai 汉简书 & \verb+\hanj+ & \hanj 汉简书 \\
+% \kai 魏碑体 & \verb+\wbei+ & \wbei 魏碑体 \\
+% \hline
+
+\end{tabular}
+\end{table}
+
+\end{document}

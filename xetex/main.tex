@@ -1,0 +1,115 @@
+\documentclass[twoside,doctor,numberorder]{zjuthesis}
+%==============================================================
+%==============================================================
+
+%自己需要增加什么 package 或修改什么设置的话，都放在这里吧。
+%\usepackage{xxxx}
+\usepackage{subfigure}
+\usepackage{pstricks}
+% tikz drawing
+% \usepackage[latin1]{inputenc}
+% \usepackage{tikz}
+% \usetikzlibrary{shapes,arrows}
+
+%\usepackage{marginnote}
+\usepackage{xargs}
+%\usepackage[pdftex,dvipsnames]{xcolor} 
+\usepackage[disable,colorinlistoftodos,prependcaption]{todonotes}
+%\usepackage[colorinlistoftodos,prependcaption]{todonotes}
+
+
+%==============================================================
+%==============================================================
+\begin{document}
+%==============================================================
+%==============================================================
+%这部分是论文封面、题名页需要的信息，请根据《研究生学位论文编写规则》自行修改
+
+  % {论文分类号}{论文密级}
+  %\zjutype{TP316}{}
+  %论文题目：{中文}{英文}
+  \zjutitle{通鉴纪事本末}%
+  {Tong Jian Ji Shi Ben Mo}
+  %作者：{姓名}{学号}
+  \zjuauthor{叶衡}{}
+  %指导教师：{导师}{合作导师}
+
+%==============================================================
+% 这部分除了“取舍”外，不需要自己修改，必要信息都已在上面设置。
+
+  %封面
+  %\input{chap/cover}
+  %中文题名页
+  %\input{chap/titlec}
+  %英文题名页
+  %\input{chap/titlee} % 硕士论文请根据需要取舍。
+  %独创性声明
+  %\input{chap/announce}
+
+  \frontmatter   
+  \pagenumbering{Roman}
+
+  %勘误页
+  %\input{errata}  % 请根据需要取舍。
+  %致谢
+  %\input{chap/thanks}
+  %序言
+  %\input{preface} % 请根据需要取舍。
+  %中文摘要
+  %\include{chap/absc}
+  %英文摘要
+  %\include{chap/abse}
+
+%==============================================================
+%这部分不需要自己修改。
+
+  %目次页
+  \tableofcontents
+  \addtocontents{toc}{\protect\chaptermark{目次}}
+  %\addtocontents{toc}{\protect\contentsline {chapter}{\protect\makebox[\linewidth]{目次\hfill}\vspace{-2em}}{}}
+  \addtocontents{toc}{\protect\contentsline{subchapter}{目次}{}{}}
+  %添加“目次”到pdf书签
+  \pdfbookmark[0]{目次}{contents}
+  %插图和附表清单
+  %% \listoffigures
+  %% \addtocontents{lof}{\protect\chaptermark{图目录}}
+  %% \listoftables
+  %% \addtocontents{lot}{\protect\chaptermark{表目录}}
+  %% %术语表
+  %% \printnomenclature
+  %% \chaptermark{术语表}
+
+  \mainmatter
+
+%==============================================================
+
+  \include{chap/chap1}
+
+%==============================================================
+%这也是个不需要自己修改的部分。
+
+  \backmatter %结束章节自动编号
+
+  %参考文献
+  %\addcontentsline{toc}{chapter}{参考文献} % 解决目录中没有相应的参考文献的条目问题
+  %\chaptermark{参考文献}
+
+%==============================================================
+
+%  \bibliography{bibfile/zjubib,bibfile/yeminjiao-phd-cite}
+%\bibliography{bibfile/library}
+
+
+  %附录
+  % \include{chap/appe}
+  % 这里应该还有个 indices，但我从没见过有使用 indices 的论文，略之。
+  %作者简历
+%\include{chap/self}
+  %发表论文
+%\include{chap/publications}
+  %后记
+%\include{chap/postscript}
+
+%==============================================================
+%==============================================================
+\end{document}
